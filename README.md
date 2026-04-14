@@ -1,64 +1,34 @@
-# 📊 Dashboard de Vendas
+![Python](https://img.shields.io/badge/python-000000?style=for-the-badge&logo=python&logoColor=white)
+![Requests](https://img.shields.io/badge/requests-000000?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-000000?style=for-the-badge&logo=pandas&logoColor=white)
+![Streamlit](https://img.shields.io/badge/streamlit-000000?style=for-the-badge&logo=streamlit&logoColor=white)
+![Plotly](https://img.shields.io/badge/plotly-000000?style=for-the-badge&logo=plotly&logoColor=white)
 
-![Streamlit](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Plotly Dash](https://img.shields.io/badge/plotly-3F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white)
+# Plataforma de Inteligencia Comercial
 
-Este projeto é um **Dashboard de Vendas Interativo** desenvolvido com [Streamlit](https://streamlit.io/), utilizando `Pandas` para manipulação de dados e `Plotly` para visualizações interativas.
+## Objetivo
+Fornecer uma visão clara de KPIs cruciais (Receita, Volume e Ticket Médio), permitindo que gestores tomem decisões baseadas em dados através de filtros dinâmicos de região, período e performance de vendedores.
 
----
+## Diferenciais Técnicos e Funcionalidades
+- **Otimização de Performance**: Utilização de `st.cache_data` com TTL (Time-To-Live) para reduzir o overhead de requisições à API e acelerar a experiência do usuário.
+- **Design Profissional (Dark Theme)**: Interface customizada via `.streamlit/config.toml` para um visual sóbrio e moderno, ideal para ambientes corporativos.
+- **Visualização Geoespacial**: Mapas de dispersão geográfica (`scatter_geo`) para identificação imediata de polos de receita na América do Sul.
+- **Análise Multidimensional**:
+    - **Visão de Receita**: Evolução mensal, distribuição por categorias e top estados.
+    - **Visão de Volume**: Quantidade de transações e sazonalidade.
+    - **Ranking de Vendedores**: Análise competitiva de performance individual.
+- **Tratamento de Erros**: Implementação de blocos `try-except` para garantir que a aplicação não apresente falhas em caso de instabilidade na API de dados.
 
-## Imagens Demonstrativas
+## Estrutura do Repositório
+```text
+├── .streamlit/
+│   └── config.toml          # Definições de cores e tema Dark
+├── pages/
+│   └── Dados_Brutos.py      # Página de exportação e filtragem tabular
+├── Dashboard.py             # Aplicação principal (UI/UX e Gráficos)
+├── requirements.txt         # Dependências do projeto
+└── README.md                # Documentação
+```
 
-Abaixo estão algumas capturas de tela que mostram as principais funcionalidades do app:
-
----
-
-### Visão Geral da Receita
-
-![Dashboard Receita](./Imagens/Receitas.png)
-
-Nesta aba você encontra:
-- **Receita total** acumulada  
-- **Tops estados por receita** (ranking dos estados geradores de maior faturamento)  
-- **Receita por categoria** de produto  
-- **Evolução mensal da receita** (2020–2023) 
----
-
-### Visão Geral de Vendas
-
-![Dashboard Vendas](./Imagens/qtd_vendas.png)
-
-Nesta aba você encontra:
-- **Quantidade total de vendas** realizadas  
-- **Tops estados por volume de vendas**  
-- **Vendas por categoria** de produto  
-- **Evolução mensal da quantidade de vendas** (2020–2023)
-
----
-
-### Vendedores em Destaque
-
-![Dashboard Vendedores](./Imagens/Vendedores.png)
-
-A aba de **vendedores** permite:
-- Visualizar os **tops vendedores por receita**
-- Ver os **tops vendedores por quantidade de vendas**
-- Ajustar o número de vendedores exibidos (de 0 até 10 ou mais)
-
----
-
-### Dados Brutos
-
-![Dashboard Dados Brutos](./Imagens/Dados_Brutos.png)
-
-A aba de **dados brutos** mostra a base completa utilizada no dashboard, com:
-- Filtros por nome do produto, categoria, data, local de compra, forma de pagamento etc.
-- Visualização e filtragem interativas
-- Download da base de dados em CSV
-
----
-
-## 🚀 Acesse o App Online
-
-🔗 [https://matheusnajal-dashboard.streamlit.app/](https://matheusnajal-dashboard.streamlit.app/)
-
----
+## Acessar a Aplicação em Produção
+**[Dashboard Online](https://matheusnajal-dashboard.streamlit.app/)**
