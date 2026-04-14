@@ -30,5 +30,8 @@ Fornecer uma visão clara de KPIs cruciais (Receita, Volume e Ticket Médio), pe
 └── README.md                # Documentação
 ```
 
+## Resultados e Insights
+O dashboard permite identificar rapidamente quais categorias possuem o maior Ticket Médio e quais regiões necessitam de maior esforço logístico ou de vendas, facilitando a alocação de recursos de forma estratégica.
+
 ## Acessar a Aplicação em Produção
 **[Dashboard Online](https://matheusnajal-dashboard.streamlit.app/)**
